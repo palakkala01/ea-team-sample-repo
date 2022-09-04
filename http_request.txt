@@ -1,0 +1,16 @@
+curl -X POST https://app.tecton.ai/api/v1/feature-service/get-features\
+     -H "Authorization: Tecton-key f9e94eb795d0ee67545900ab8feb3c84" -d\
+'{
+  "params": {
+    "feature_service_name": "ea_team_feature_service",
+    "join_key_map": {
+      "persona_index": "1234"
+    },
+    "request_context_map": {
+      "dob": "6-18-1983",
+      "gender": "M",
+      "assets": "[100, 200, 300]"
+    },
+    "workspace_name": "eddie"
+  }
+}' | jq .
